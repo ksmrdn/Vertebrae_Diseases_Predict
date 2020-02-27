@@ -50,6 +50,10 @@ Dalam repository ini, terdapat dokumentasi Notebook dan Folder Flask:
 <hr>
 <br>
 
+# **WORKFLOW**
+Alur pengerjaan project ialah seperti berikut.
+![workflow][work-flow]
+
 # **Flask Preview**
 Berikut ini adalah preview App yang dibuat menggunakan Flask untuk menampilkan:
 > * Tampilkan beranda interaksi
