@@ -84,7 +84,7 @@ Juga terdapat tombol __"Vertebrae Disease Medical Check"__, untuk kembali ke lam
 ![alt text][form-flask]<br>
 
 ## **Predict**
-Tampilan akhir (``http://127.0.0.1:2070/form``)  Laman __"predict"__ menjukkan bagian yang menampilkan informasi-informasi yang telah diisikan, lalu mempunyai judgement hasil prediksi apakah pasien __"normal, mengidap hernia disk, atau spondylolisthesis"__.
+Tampilan akhir (``http://127.0.0.1:2070/predict``)  Laman __"predict"__ menjukkan bagian yang menampilkan informasi-informasi yang telah diisikan, lalu mempunyai judgement hasil prediksi apakah pasien __"normal, mengidap hernia disk, atau spondylolisthesis"__.
 
 Ditampilkan juga persentase probabilitas akan masing-masing class, jadi informasi ini dapat memperkirakan sebesar apa prediksi yang dihasilkan terhadap suatu class dan bagaimana kemungkinan untuk class yang lainnya.
 
