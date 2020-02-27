@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form To Predict</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div>
+    <form action="http://127.0.0.1:2070">   
+        <nav style="background-color: #00D0FF;text-align: center;height: 50px;padding: 5px;">
+            <a class="navbar-brand" href="/" style="color: white;">Vertebrae Diseases Medical Check</a> 
+        </nav>
+    </form>
+    </div>
+
+    <div class="container" style="margin-top: 2%;">
+        <form method='POST' action="http://127.0.0.1:2070/predict">
+        <div class="row">
+            <div class="col">
+                    <div class="form-group">
+                        <label for="formName">Name</label>
+                        <input type="text" class="form-control" name="Name" id="formName">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGender">Gender</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderMen"
+                                    value="Man">
+                                <label class="form-check-label" for="genderMen">Man</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="genderWomen"
+                                    value="Woman">
+                                <label class="form-check-label" for="genderWomen">Woman</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formAge">Age</label>
+                        <input type="number" class="form-control" name="Age" id="formAge">
+                    </div>
+                    <div class="form-group">
+                        <label for="formHeight">Height (cm)</label>
+                        <input type="number" class="form-control" name="Height" id="formHeight">
+                    </div>
+                    <div class="form-group">
+                        <label for="formWeight">Weight (kg)</label>
+                        <input type="number" class="form-control" name="Weight" id="formWeight">
+                    </div>
+                    <div class="form-group">
+                        <label for="formJob">Job</label>
+                        <input type="text" class="form-control" name="Job" id="formJob">
+                    </div>
+            </div>
+
+            <div class="col">
+                    <div class="form-group">
+                        <label >Pelvic Incidence (°)</label>
+                        <input type="number" class="form-control" id="PI" name="PI" step="0.001" min=-50 max=250> 
+                        <!-- placeholder="Range : 20 - 135"> -->
+                    </div>
+                    <div class="form-group">
+                        <label >Pelvic Tilt (°)</label>
+                        <input type="number" class="form-control" id="PT" name="PT" step="0.001" min=-50 max=250>
+                        <!-- placeholder="Range : -12 - 54"> -->
+                    </div>
+                    <div class="form-group">
+                        <label >Lumbar Lordosis (°)</label>
+                        <input type="number" class="form-control" id="LLA" name="LLA" step="0.001" min=-50 max=250> 
+                        <!-- placeholder="Range : 8 - 131"> -->
+                    </div>
+                    <div class="form-group">
+                        <label >Sacral Slope (°)</label>
+                        <input type="number" class="form-control"  id="SS" name="SS" step="0.001" min=-50 max=250> 
+                        <!-- placeholder="Range : 7 - 121"> -->
+                    </div>
+                    <div class="form-group">
+                        <label >Pelvic Radius (mm)</label>
+                        <input type="number" class="form-control" id="PR" name="PR" step="0.001" min=-50 max=250>
+                         <!-- placeholder="Range : 63 - 170"> -->
+                    </div>
+                    <div class="form-group">
+                        <label >Degree Spondylolisthesis (°)</label>
+                        <input type="number" class="form-control" id="DS" name="DS" step="0.001" min=-50 max=500> 
+                        <!-- placeholder="Range : -17 - 425"> -->
+                    </div>
+                        <input class="btn btn-primary btn-lg" href="/predict" style="color: white;" role="button" type="submit" value="Predict" />
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- <form action="http://127.0.0.1:2070/predict">
+        <!-- <div  style="text-align: center;margin: 2%;"> -->
+            <!-- <button type="button" class="btn btn-secondary btn-lg">Back to home</button> -->
+            <!-- <button type="submit" class="btn btn-primary btn-lg" href="/predict" value="Classificy">Predict</button>
+        <!-- </div> -->
+    <!-- </form> -->
+
+        <br>
+        <centre>
+    <div style="width: 50%; margin-left: 25%; margin-right: 30%;">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+                <li data-target="#carousel" data-slide-to="4"></li>
+                <li data-target="#carousel" data-slide-to="5"></li>
+                <li data-target="#carousel" data-slide-to="6"></li>
+                <li data-target="#carousel" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/panggul.jpg" width="350px" height="350px"
+                        alt="Front Pelvis"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/sakit-pinggang.png" width="350px" height="350px"
+                        alt="Vertebral Column"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/combined.jpg" width="350px" height="350px"
+                        alt="Assocation between Pelvic Incidence, Pelvic Tilt, & Sacral Slope"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/pi-pt-ss.jpg" width="350px" height="350px"
+                        alt="Pelvic Incidence, Pelvic Tilt, & Sacral Slope"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/spinal_pelvis.png" width="350px" height="350px"
+                        alt="Lordosis Kyphosis"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/Sagittal-lumbar-and-pelvic-parameters-from-the-standing-lateral-radiograph-The-hip-axis.png" width="350px" height="350px"
+                        alt="Sagital Lumbar Pelvis in Vertical Hip Axis"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/lumbar-lordosis.PNG" width="350px" height="350px"
+                        alt="Lumbar Lordosis from X-Ray"/>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://raw.githubusercontent.com/ksmrdn/images_final/master/templates/image/types-of-LL.PNG" width="350px" height="350px"
+                        alt="Types of Lumbar Lordosis"/>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+        </centre>
+</body>
+
+<script>
+
+</script>
+
+</html>
