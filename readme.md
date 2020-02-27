@@ -90,6 +90,8 @@ Ditampilkan juga persentase probabilitas akan masing-masing class, jadi informas
 
 Juga terdapat tombol __"Vertebrae Disease Medical Check"__, untuk kembali ke laman __"Home"__.
 
+![alt text][result-flask]<br>
+
 Web juga menampilkan beberapa slide gambar mengenai definisi penyakit, gejala, dan penanganan apa saja yang dapat dilakukan sebagai informasi atau wawasan tambahan.
 
 Data yang  telah dimasukkan dan diprediksi, akan dimasukkan ke dalam __"history record"__ menggunakan __"MySQL"__. 
